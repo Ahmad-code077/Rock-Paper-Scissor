@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main id="container">
+      <h2 class="outerHeading">
+        Lets play a <span>Rock Paper Scissor</span> game
+      </h2>
+      <form action="/" class="form">
+        <label class="label" for="select">Type what you want to select </label>
+        <input
+          list="game"
+          class="input"
+          type="text"
+          id="select"
+          onfocus="this.value=''"
+          onchange="this.blur();"
+        />
+        <datalist id="game">
+          <option value="Rock"></option>
+          <option value="Paper"></option>
+          <option value="Scissor"></option>
+        </datalist>
+
+        <button class="btn" type="submit">Play</button>
+      </form>
+      <div id="result"></div>
+    </main>
+  </body>
+</html>
